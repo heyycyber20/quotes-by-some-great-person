@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber's Paradise of Quotes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .intro {
+      font-size: 2em;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease-in-out;
+      padding: 0 20px;
+    }
+
+    .quote-box {
+      max-width: 85%;
+      margin: auto;
+      font-size: 1.6em;
+      padding: 25px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 2s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .author {
+      margin-top: 12px;
+      font-style: italic;
+      color: #FFD700;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .intro {
+        font-size: 1.5em;
+      }
+
+      .quote-box {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    Hello Dear 🌹<br>
+    This is <strong>Cyber</strong>, and you are now entering the <em>Paradise of Quotes</em><br>
+    — a journey through the minds of the greatest thinkers 🌌
+  </div>
+
+  <div class="quote-box" id="quoteBox">
+    <div id="quoteText">"Don’t get lost in your pain, know that one day your pain will become your cure."</div>
+    <div class="author" id="quoteAuthor">— Rumi</div>
+  </div>
+
+  <script>
+    const quotes = [
+      { text: "Don’t get lost in your pain, know that one day your pain will become your cure.", author: "Rumi" },
+      { text: "The darker the night, the brighter the stars, the deeper the grief, the closer is God.", author: "Fyodor Dostoevsky" },
+      { text: "In the depth of winter, I finally learned that within me there lay an invincible summer.", author: "Albert Camus" },
+      { text: "I am terrified by this dark thing that sleeps in me.", author: "Sylvia Plath" },
+      { text: "I am free and that is why I am lost.", author: "Franz Kafka" },
+      { text: "You were born with wings, why prefer to crawl through life?", author: "Rumi" },
+      { text: "Man is what he believes.", author: "Anton Chekhov" },
+      { text: "To be happy, we must not be too concerned with others.", author: "Albert Camus" },
+      { text: "There is some good in this world, and it's worth fighting for.", author: "J.R.R. Tolkien" },
+      { text: "What hurts you, blesses you. Darkness is your candle.", author: "Rumi" },
+      { text: "Without pain, how could we know joy?", author: "John Green" },
+      { text: "The worst crime is faking it.", author: "Kurt Cobain" },
+      { text: "We are what we pretend to be, so we must be careful about what we pretend to be.", author: "Kurt Vonnegut" },
+      { text: "If you're lonely when you're alone, you're in bad company.", author: "Jean-Paul Sartre" },
+      { text: "Life is not a problem to be solved, but a reality to be experienced.", author: "Søren Kierkegaard" },
+      { text: "Even the darkest night will end and the sun will rise.", author: "Victor Hugo" },
+      { text: "You talk when you cease to be at peace with your thoughts.", author: "Kahlil Gibran" },
+      { text: "Faith is the bird that feels the light when the dawn is still dark.", author: "Rabindranath Tagore" },
+      { text: "He who opens a school door, closes a prison.", author: "Victor Hugo" },
+      { text: "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.", author: "Albert Camus" },
+      { text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+      { text: "I rebel; therefore I exist.", author: "Albert Camus" },
+      { text: "The most beautiful experience we can have is the mysterious.", author: "Albert Einstein" },
+      { text: "Do not seek the because — in love there is no because, no reason, no explanation, no solutions.", author: "Anaïs Nin" },
+      { text: "Loneliness is the human condition. No one is ever going to fill that space.", author: "Janet Fitch" },
+      { text: "Freedom is what you do with what's been done to you.", author: "Jean-Paul Sartre" },
+      { text: "When you want something, all the universe conspires in helping you to achieve it.", author: "Paulo Coelho" },
+      { text: "Don’t grieve. Anything you lose comes round in another form.", author: "Rumi" },
+      { text: "A woman has to live her life, or live to repent not having lived it.", author: "D.H. Lawrence" },
+      { text: "You cannot swim for new horizons until you have courage to lose sight of the shore.", author: "William Faulkner" }
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % quotes.length;
+      document.getElementById("quoteText").innerText = quotes[index].text;
+      document.getElementById("quoteAuthor").innerText = — ${quotes[index].author};
+    }, 6000);
+  </script>
+
+</body>
+</html>
